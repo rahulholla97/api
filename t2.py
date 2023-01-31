@@ -1,8 +1,9 @@
 import requests
 import json
-input_from_api = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-data = input_from_api.text
-aa=(json.loads(data))
-print('Welcome world')
-for k,v in aa.items():
-    print(f"{k} is assigned to {v}")
+
+fetched_data = requests.get('https://jsonplaceholder.typicode.com/todos/1')
+
+data = json.loads(fetched_data.text)
+print('BYE world')
+for key,value in data.items():
+    print(f"{key} = {value}"
